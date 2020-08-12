@@ -16,14 +16,14 @@ const tableData = [
       league: "NBA"
   },
   {
-      name: "Denis Rodman",
+      name: "Dennis Rodman",
       email: "drodman91@bulls.com",
       position: "Center",
       league: "NBA"
   },
   {
     name: "Wayne Gretzky",
-    email: "thegreatone@rangers.com",
+    email: "thegreatone99@rangers.com",
     position: "Center",
     league: "NHL"
 },
@@ -35,7 +35,7 @@ const tableData = [
 },
 {
   name: "Tom Brady",
-  email: "tbrady@bucs.com",
+  email: "tb12@bucs.com",
   position: "Quarterback",
   league: "NFL"
 }
