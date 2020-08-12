@@ -1,57 +1,55 @@
 import React, { Component, useState } from "react";
-import Cell from "../Cell";
 
-class EmployeeTable extends Component {
-    renderHeaderRow = (_cell, cellIndex) => {
-        const { headings } = this.props;
+// const tableData = [
+//     {
+//         name: "Michael Jordan",
+//         email: "mj23@bulls.com",
+//         position: "Guard",
+//         departemnt: "NBA"
+//     },
+//     {
+//         name: "Scotty Pippen",
+//         email: "scottyp33@bulls.com",
+//         position: "Forward",
+//         departemnt: "NBA"
+//     },
+//     {
+//         name: "Denis Rodman",
+//         email: "drodman91@bulls.com",
+//         position: "Center",
+//         departemnt: "NBA"
+//     }
+// ];
 
-        return (
-            <Cell
-                key={`heading-${cellIndex}`}
-                content={headings[cellIndex]}
-                header={true}
-            />
-        )
-    };
+class Table extends Component {
+	render() {
+		const { data } = this.props;
 
-    renderRow = (_row, rowIndex) => {
-        const { rows } = this.props;
-
-        return (
-            <tr key={`row-${rowIndex}`}>
-                {rows[rowIndex].map((_cell, cellIndex) => {
-                    return (
-                        <Cell
-                            key={`${rowIndex}-${cellIndex}`}
-                            content={rows[rowIndex][cellIndex]}
-                        />
-                    )
-                })}
-            </tr>
-        )
-    }
-
-    render() {
-        const { headings, rows } = this.props;
-
-        this.renderHeaderRow = this.renderHeaderRow.bind(this);
-        this.renderRow = this.renderRow.bind(this);
-
-        const headMarkup = (
-            <tr key="heading">
-                {headings.map(this.renderHeaderRow)}
-            </tr>
-        );
-
-        const bodyMarkup = rows.map(this.renderRow);
-
-        return (
-            <table className="Table">
-                <thead>{headMarkup}</thead>
-                <tbody>{bodyMarkup}</tbody>
-            </table>
-        );
-    }
+		return (
+			data.length > 0 && (
+				<table className='text-left'>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Email</th>
+                            <th>Position</th>
+                            <th>Department</th>
+						</tr>
+					</thead>
+					<tbody>
+						{data.map(employee => (
+							<tr>
+								<td>{employee.name}</td>
+								<td>{employee.email}</td>
+                                <td>{employee.position}</td>
+                                <td>{employee.department}</td>
+							</tr>
+						))}
+					</tbody>
+				</table>
+			)
+		);
+	}
 }
 
-export default EmployeeTable;
+export default Table;
