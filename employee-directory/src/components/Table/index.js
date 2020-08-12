@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 
 class Table extends Component {
 	render() {
@@ -12,7 +12,7 @@ class Table extends Component {
 							<th>Name</th>
 							<th>Email</th>
                             <th>Position</th>
-                            <th>Department</th>
+                            <th>League</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -21,7 +21,7 @@ class Table extends Component {
 								<td>{employee.name}</td>
 								<td>{employee.email}</td>
                                 <td>{employee.position}</td>
-                                <td>{employee.department}</td>
+                                <td>{employee.league}</td>
 							</tr>
 						))}
 					</tbody>

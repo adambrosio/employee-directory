@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React from 'react';
 import Table from "./components/Table";
 import './App.css';
 
@@ -7,31 +7,37 @@ const tableData = [
       name: "Michael Jordan",
       email: "mj23@bulls.com",
       position: "Guard",
-      department: "NBA"
+      league: "NBA"
   },
   {
       name: "Scotty Pippen",
       email: "scottyp33@bulls.com",
       position: "Forward",
-      department: "NBA"
+      league: "NBA"
   },
   {
       name: "Denis Rodman",
       email: "drodman91@bulls.com",
       position: "Center",
-      department: "NBA"
+      league: "NBA"
   },
   {
     name: "Wayne Gretzky",
     email: "thegreatone@rangers.com",
     position: "Center",
-    department: "NHL"
+    league: "NHL"
 },
 {
-  name: "Tomy Brady",
+  name: "Brian Leetch",
+  email: "bleetch2@rangers.com",
+  position: "Defenseman",
+  league: "NHL"
+},
+{
+  name: "Tom Brady",
   email: "tbrady@bucs.com",
   position: "Quarterback",
-  department: "NFL"
+  league: "NFL"
 }
 ];
 
