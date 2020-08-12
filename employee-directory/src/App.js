@@ -1,43 +1,47 @@
 import React, { Component, useState } from 'react';
-import EmployeeTable from "./components/Table";
+import Table from "./components/Table";
 import './App.css';
 
-class App extends Component {
-  render() {
+const tableData = [
+  {
+      name: "Michael Jordan",
+      email: "mj23@bulls.com",
+      position: "Guard",
+      department: "NBA"
+  },
+  {
+      name: "Scotty Pippen",
+      email: "scottyp33@bulls.com",
+      position: "Forward",
+      department: "NBA"
+  },
+  {
+      name: "Denis Rodman",
+      email: "drodman91@bulls.com",
+      position: "Center",
+      department: "NBA"
+  },
+  {
+    name: "Wayne Gretzky",
+    email: "thegreatone@rangers.com",
+    position: "Center",
+    department: "NHL"
+},
+{
+  name: "Denis Rodman",
+  email: "drodman91@bulls.com",
+  position: "Center",
+  department: "NBA"
+},
+];
 
-    const headings = [
-      'Name',
-      'Email',
-      'Position',
-      'Department'
-    ];
+const App = () => (
+  <div className="text-center">
+    <h4>Employee Directory</h4>
+    <p>Click on icon to sort</p>
 
-    const rows = [
-      [
-        'Michael Jordan',
-        'mj23@bulls.com',
-        'Guard',
-        'NBA'
-      ],
-      [
-        'Scotty Pippen',
-        'scotty33@bulls.com',
-        'Forward',
-        'NBA'
-      ],
-      [
-        'Denis Rodman',
-        'drodman91@bulls.com',
-        'Center',
-        'NBA'
-      ]
-    ];
+    <Table data={tableData} />
+  </div>
+)
 
-    return (
-      <EmployeeTable>
-
-      </EmployeeTable>
-    );
-  }
-}
 export default App;
