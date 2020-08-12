@@ -37,7 +37,7 @@ class EmployeeTable extends Component {
         this.renderHeaderRow = this.renderHeaderRow.bind(this);
         this.renderRow = this.renderRow.bind(this);
 
-        const markup = (
+        const headMarkup = (
             <tr key="heading">
                 {headings.map(this.renderHeaderRow)}
             </tr>
@@ -47,7 +47,7 @@ class EmployeeTable extends Component {
 
         return (
             <table className="Table">
-                <thead>{markup}</thead>
+                <thead>{headMarkup}</thead>
                 <tbody>{bodyMarkup}</tbody>
             </table>
         );
