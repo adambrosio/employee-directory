@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component, useState } from 'react';
+import EmployeeTable from "./components/Table";
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+class App extends Component {
+  render() {
 
+    const headings = [
+      'Name',
+      'Email',
+      'Position',
+      'Department'
+    ];
+
+    const rows = [
+      [
+        'Michael Jordan',
+        'mj23@bulls.com',
+        'Guard',
+        'NBA'
+      ],
+      [
+        'Scotty Pippen',
+        'scotty33@bulls.com',
+        'Forward',
+        'NBA'
+      ],
+      [
+        'Denis Rodman',
+        'drodman91@bulls.com',
+        'Center',
+        'NBA'
+      ]
+    ];
+
+    return (
+      <EmployeeTable>
+
+      </EmployeeTable>
+    );
+  }
+}
 export default App;
