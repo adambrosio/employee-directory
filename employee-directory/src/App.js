@@ -28,11 +28,11 @@ const tableData = [
     department: "NHL"
 },
 {
-  name: "Denis Rodman",
-  email: "drodman91@bulls.com",
-  position: "Center",
-  department: "NBA"
-},
+  name: "Tomy Brady",
+  email: "tbrady@bucs.com",
+  position: "Quarterback",
+  department: "NFL"
+}
 ];
 
 const App = () => (
