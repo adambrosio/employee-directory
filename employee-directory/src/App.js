@@ -43,8 +43,8 @@ const tableData = [
 
 const App = () => (
   <div className="text-center">
-    <h4>Employee Directory</h4>
-    <p>Click on icon to sort</p>
+    <h2>Employee Directory</h2>
+    <h5>Click on icon to sort (in progress)</h5>
 
     <Table data={tableData} />
   </div>
